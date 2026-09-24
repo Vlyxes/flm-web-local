@@ -1,0 +1,54 @@
+{
+  "url": "https://vlyxes.github.io/flm-web-local/",
+  "checks": [
+    {
+      "path": "app.js",
+      "http": 200,
+      "match": true,
+      "bytes": 6573
+    },
+    {
+      "path": "assets/favicon.svg",
+      "http": 200,
+      "match": true,
+      "bytes": 224
+    },
+    {
+      "path": "assets/fonts/DM-Sans-OFL.txt",
+      "http": 200,
+      "match": true,
+      "bytes": 4482
+    },
+    {
+      "path": "assets/fonts/Instrument-Serif-OFL.txt",
+      "http": 200,
+      "match": true,
+      "bytes": 4405
+    },
+    {
+      "path": "assets/fonts/dm-sans.ttf",
+      "http": 200,
+      "match": true,
+      "bytes": 240164
+    },
+    {
+      "path": "assets/fonts/instrument-serif-italic.ttf",
+      "http": 200,
+      "match": true,
+      "bytes": 71592
+    },
+    {
+      "path": "index.html",
+      "http": 200,
+      "match": true,
+      "bytes": 13938
+    },
+    {
+      "path": "style.css",
+      "http": 200,
+      "match": true,
+      "bytes": 19752
+    }
+  ],
+  "pass": true
+}

@@ -1,0 +1,105 @@
+{
+  "url": "https://vlyxes.github.io/flm-web-local/",
+  "checkedAt": "2026-09-24T11:59:05.458Z",
+  "checks": [
+    {
+      "name": "Public page returns HTTP 200",
+      "pass": true,
+      "evidence": 200
+    },
+    {
+      "name": "Both bundled fonts load",
+      "pass": true,
+      "evidence": {
+        "sans": true,
+        "serif": true
+      }
+    },
+    {
+      "name": "Four specialities available",
+      "pass": true,
+      "evidence": 4
+    },
+    {
+      "name": "Public navigation selects accounting guide",
+      "pass": true,
+      "evidence": "PUNTO DE PARTIDA / CONTABLE"
+    },
+    {
+      "name": "Public guide really downloads",
+      "pass": true,
+      "evidence": {
+        "filename": "FLM-guia-contable.txt",
+        "failure": null
+      }
+    },
+    {
+      "name": "No public overflow at 390px",
+      "pass": true,
+      "evidence": {
+        "width": 390,
+        "scroll": 390
+      }
+    },
+    {
+      "name": "No public overflow at 1440px",
+      "pass": true,
+      "evidence": {
+        "width": 1440,
+        "scroll": 1440
+      }
+    },
+    {
+      "name": "Public mobile menu works",
+      "pass": true,
+      "evidence": true
+    },
+    {
+      "name": "Public menu closes with Escape",
+      "pass": true
+    },
+    {
+      "name": "No runtime or console errors",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "No failed requests",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "All runtime resources share the site origin",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "errors": [],
+  "failedRequests": [],
+  "requests": [
+    "https://vlyxes.github.io/flm-web-local/",
+    "https://vlyxes.github.io/flm-web-local/assets/fonts/dm-sans.ttf",
+    "https://vlyxes.github.io/flm-web-local/style.css",
+    "https://vlyxes.github.io/flm-web-local/app.js",
+    "https://vlyxes.github.io/flm-web-local/assets/fonts/instrument-serif-italic.ttf",
+    "https://vlyxes.github.io/flm-web-local/assets/favicon.svg",
+    "https://vlyxes.github.io/flm-web-local/assets/favicon.svg",
+    "https://vlyxes.github.io/flm-web-local/",
+    "https://vlyxes.github.io/flm-web-local/assets/fonts/dm-sans.ttf",
+    "https://vlyxes.github.io/flm-web-local/style.css",
+    "https://vlyxes.github.io/flm-web-local/app.js",
+    "https://vlyxes.github.io/flm-web-local/assets/fonts/instrument-serif-italic.ttf",
+    "https://vlyxes.github.io/flm-web-local/assets/favicon.svg",
+    "https://vlyxes.github.io/flm-web-local/",
+    "https://vlyxes.github.io/flm-web-local/assets/fonts/dm-sans.ttf",
+    "https://vlyxes.github.io/flm-web-local/style.css",
+    "https://vlyxes.github.io/flm-web-local/app.js",
+    "https://vlyxes.github.io/flm-web-local/assets/fonts/instrument-serif-italic.ttf",
+    "https://vlyxes.github.io/flm-web-local/assets/favicon.svg"
+  ],
+  "summary": {
+    "checks": 12,
+    "passed": 12,
+    "failed": 0
+  }
+}

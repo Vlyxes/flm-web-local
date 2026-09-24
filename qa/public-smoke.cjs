@@ -1,0 +1,52 @@
+const {chromium} = require(process.env.PLAYWRIGHT_MODULE || 'playwright');
+const fs = require('node:fs');
+const path = require('node:path');
+
+(async () => {
+  const url = process.env.SITE_URL || 'https://vlyxes.github.io/flm-web-local/';
+  const browser = await chromium.launch({...(process.env.PLAYWRIGHT_CHANNEL ? {channel:process.env.PLAYWRIGHT_CHANNEL} : {}), headless:true});
+  const context = await browser.newContext({viewport:{width:1440,height:1000},acceptDownloads:true});
+  const page = await context.newPage();
+  const report = {url,checkedAt:new Date().toISOString(),checks:[],errors:[],failedRequests:[],requests:[]};
+  const check = (name, pass, evidence) => report.checks.push({name,pass,evidence});
+  page.on('pageerror', error => report.errors.push(error.message));
+  page.on('console', message => {if(message.type()==='error') report.errors.push(message.text());});
+  page.on('request', request => report.requests.push(request.url()));
+  page.on('requestfailed', request => report.failedRequests.push(request.url()));
+  page.on('response', response => {if(response.status()>=400) report.failedRequests.push({url:response.url(),status:response.status()});});
+  const response = await page.goto(url,{waitUntil:'networkidle'});
+  check('Public page returns HTTP 200',response.status()===200,response.status());
+  await page.evaluate(() => document.fonts.ready);
+  const fonts = await page.evaluate(() => ({sans:document.fonts.check('16px "DM Sans"'),serif:document.fonts.check('italic 16px "Instrument Serif"')}));
+  check('Both bundled fonts load',fonts.sans&&fonts.serif,fonts);
+  check('Four specialities available',await page.locator('details.service').count()===4,await page.locator('details.service').count());
+  await page.locator('#contable summary').click();
+  await page.locator('[data-area=contable]').click();
+  check('Public navigation selects accounting guide',await page.locator('[data-choice=contable]').getAttribute('aria-pressed')==='true',await page.locator('#guide-kicker').innerText());
+  const [download] = await Promise.all([page.waitForEvent('download'),page.locator('.download-guide').click()]);
+  const downloadPath = path.join(__dirname,'public-FLM-guia-contable.txt');
+  await download.saveAs(downloadPath);
+  check('Public guide really downloads',fs.readFileSync(downloadPath,'utf8').includes('Versión de demostración.'),{filename:download.suggestedFilename(),failure:await download.failure()});
+  for(const width of [390,1440]) {
+    await page.setViewportSize({width,height:1000});
+    await page.goto(url,{waitUntil:'networkidle'});
+    await page.locator('.motion-toggle').click();
+    const dimensions = await page.evaluate(() => ({width:innerWidth,scroll:document.documentElement.scrollWidth}));
+    check(`No public overflow at ${width}px`,dimensions.width===dimensions.scroll,dimensions);
+    await page.screenshot({path:path.join(__dirname,`public-${width}.png`),fullPage:true});
+  }
+  await page.setViewportSize({width:390,height:844});
+  await page.locator('.menu-toggle').click();
+  check('Public mobile menu works',await page.locator('.menu-toggle').getAttribute('aria-expanded')==='true',await page.locator('#navigation').isVisible());
+  await page.keyboard.press('Escape');
+  check('Public menu closes with Escape',await page.locator('.menu-toggle').getAttribute('aria-expanded')==='false');
+  check('No runtime or console errors',report.errors.length===0,report.errors);
+  check('No failed requests',report.failedRequests.length===0,report.failedRequests);
+  const thirdParty = report.requests.filter(request=>new URL(request).origin!==new URL(url).origin);
+  check('All runtime resources share the site origin',thirdParty.length===0,thirdParty);
+  report.summary={checks:report.checks.length,passed:report.checks.filter(item=>item.pass).length,failed:report.checks.filter(item=>!item.pass).length};
+  fs.writeFileSync(path.join(__dirname,'public-smoke.json'),JSON.stringify(report,null,2)+'\n');
+  console.log(JSON.stringify({summary:report.summary,failures:report.checks.filter(item=>!item.pass)},null,2));
+  await browser.close();
+  if(report.summary.failed) process.exitCode=1;
+})().catch(error=>{console.error(error.message);process.exitCode=1;});
