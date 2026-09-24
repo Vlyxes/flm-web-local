@@ -1,0 +1,424 @@
+{
+  "checkedAt": "2026-09-24T11:56:06.430Z",
+  "checks": [
+    {
+      "name": "Four service disclosure controls",
+      "pass": true,
+      "evidence": 4
+    },
+    {
+      "name": "fiscal disclosure keyboard Enter toggles",
+      "pass": true,
+      "evidence": {
+        "before": true,
+        "after": false
+      }
+    },
+    {
+      "name": "fiscal disclosure keyboard Space toggles back",
+      "pass": true,
+      "evidence": true
+    },
+    {
+      "name": "laboral disclosure keyboard Enter toggles",
+      "pass": true,
+      "evidence": {
+        "before": false,
+        "after": true
+      }
+    },
+    {
+      "name": "laboral disclosure keyboard Space toggles back",
+      "pass": true,
+      "evidence": false
+    },
+    {
+      "name": "mercantil disclosure keyboard Enter toggles",
+      "pass": true,
+      "evidence": {
+        "before": false,
+        "after": true
+      }
+    },
+    {
+      "name": "mercantil disclosure keyboard Space toggles back",
+      "pass": true,
+      "evidence": false
+    },
+    {
+      "name": "contable disclosure keyboard Enter toggles",
+      "pass": true,
+      "evidence": {
+        "before": false,
+        "after": true
+      }
+    },
+    {
+      "name": "contable disclosure keyboard Space toggles back",
+      "pass": true,
+      "evidence": false
+    },
+    {
+      "name": "Exactly five selector choices",
+      "pass": true,
+      "evidence": 5
+    },
+    {
+      "name": "Selector fiscal updates unique state and guide",
+      "pass": true,
+      "evidence": {
+        "pressed": [
+          "fiscal"
+        ],
+        "title": "Dale contexto a tu pregunta.",
+        "kicker": "PUNTO DE PARTIDA / FISCAL",
+        "items": 3
+      }
+    },
+    {
+      "name": "Actual fiscal download",
+      "pass": true,
+      "evidence": {
+        "filename": "FLM-guia-fiscal.txt",
+        "bytes": 567,
+        "failure": null
+      }
+    },
+    {
+      "name": "Selector laboral updates unique state and guide",
+      "pass": true,
+      "evidence": {
+        "pressed": [
+          "laboral"
+        ],
+        "title": "Empieza por la situación de tu equipo.",
+        "kicker": "PUNTO DE PARTIDA / LABORAL",
+        "items": 3
+      }
+    },
+    {
+      "name": "Actual laboral download",
+      "pass": true,
+      "evidence": {
+        "filename": "FLM-guia-laboral.txt",
+        "bytes": 586,
+        "failure": null
+      }
+    },
+    {
+      "name": "Selector mercantil updates unique state and guide",
+      "pass": true,
+      "evidence": {
+        "pressed": [
+          "mercantil"
+        ],
+        "title": "Pon el acuerdo sobre la mesa.",
+        "kicker": "PUNTO DE PARTIDA / MERCANTIL",
+        "items": 3
+      }
+    },
+    {
+      "name": "Actual mercantil download",
+      "pass": true,
+      "evidence": {
+        "filename": "FLM-guia-mercantil.txt",
+        "bytes": 586,
+        "failure": null
+      }
+    },
+    {
+      "name": "Selector contable updates unique state and guide",
+      "pass": true,
+      "evidence": {
+        "pressed": [
+          "contable"
+        ],
+        "title": "Empieza por lo que dicen las cuentas.",
+        "kicker": "PUNTO DE PARTIDA / CONTABLE",
+        "items": 3
+      }
+    },
+    {
+      "name": "Actual contable download",
+      "pass": true,
+      "evidence": {
+        "filename": "FLM-guia-contable.txt",
+        "bytes": 596,
+        "failure": null
+      }
+    },
+    {
+      "name": "Selector general updates unique state and guide",
+      "pass": true,
+      "evidence": {
+        "pressed": [
+          "general"
+        ],
+        "title": "No hace falta tenerlo todo resuelto.",
+        "kicker": "PUNTO DE PARTIDA / VISIÓN DE CONJUNTO",
+        "items": 3
+      }
+    },
+    {
+      "name": "Actual general download",
+      "pass": true,
+      "evidence": {
+        "filename": "FLM-guia-general.txt",
+        "bytes": 567,
+        "failure": null
+      }
+    },
+    {
+      "name": "data-area fiscal selects guide and navigates",
+      "pass": true,
+      "evidence": {
+        "active": "fiscal",
+        "hash": "#empezamos"
+      }
+    },
+    {
+      "name": "data-area laboral selects guide and navigates",
+      "pass": true,
+      "evidence": {
+        "active": "laboral",
+        "hash": "#empezamos"
+      }
+    },
+    {
+      "name": "data-area mercantil selects guide and navigates",
+      "pass": true,
+      "evidence": {
+        "active": "mercantil",
+        "hash": "#empezamos"
+      }
+    },
+    {
+      "name": "data-area contable selects guide and navigates",
+      "pass": true,
+      "evidence": {
+        "active": "contable",
+        "hash": "#empezamos"
+      }
+    },
+    {
+      "name": "All internal anchor targets exist",
+      "pass": true,
+      "evidence": []
+    },
+    {
+      "name": "No horizontal document overflow at 390px",
+      "pass": true,
+      "evidence": {
+        "innerWidth": 390,
+        "clientWidth": 390,
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "overflows": []
+      }
+    },
+    {
+      "name": "No horizontal document overflow at 768px",
+      "pass": true,
+      "evidence": {
+        "innerWidth": 768,
+        "clientWidth": 768,
+        "scrollWidth": 768,
+        "bodyScrollWidth": 768,
+        "overflows": []
+      }
+    },
+    {
+      "name": "No horizontal document overflow at 1024px",
+      "pass": true,
+      "evidence": {
+        "innerWidth": 1024,
+        "clientWidth": 1024,
+        "scrollWidth": 1024,
+        "bodyScrollWidth": 1024,
+        "overflows": []
+      }
+    },
+    {
+      "name": "No horizontal document overflow at 1440px",
+      "pass": true,
+      "evidence": {
+        "innerWidth": 1440,
+        "clientWidth": 1440,
+        "scrollWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "overflows": []
+      }
+    },
+    {
+      "name": "No horizontal document overflow at 720px (1440px at 200% reflow equivalent)",
+      "pass": true,
+      "evidence": {
+        "innerWidth": 720,
+        "clientWidth": 720,
+        "scrollWidth": 720,
+        "bodyScrollWidth": 720,
+        "overflows": []
+      }
+    },
+    {
+      "name": "Mobile nav collapsed initially",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "name": "Keyboard opens mobile menu",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "name": "Tab reaches first mobile navigation link",
+      "pass": true,
+      "evidence": "<a href=\"#enfoque\">Nuestro enfoque</a>"
+    },
+    {
+      "name": "Escape closes menu and returns focus",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "name": "Mobile link activation closes menu and navigates",
+      "pass": true,
+      "evidence": {
+        "hash": "#enfoque"
+      }
+    },
+    {
+      "name": "Crossing mobile breakpoint resets menu state",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "name": "Motion pause control stops CSS animations",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "name": "Reduced motion has content and no animations",
+      "pass": true,
+      "evidence": {
+        "animations": 0,
+        "motionDisabled": true,
+        "motionText": "▷Movimiento reducido",
+        "heroOpacity": "1",
+        "scrollBehavior": "auto"
+      }
+    },
+    {
+      "name": "Reduced motion selector works",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "name": "NoJS mobile navigation remains visible",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "name": "NoJS native disclosure works",
+      "pass": true,
+      "evidence": {}
+    },
+    {
+      "name": "NoJS fallback and static guide available",
+      "pass": true,
+      "evidence": {
+        "fallback": "El selector requiere JavaScript. Puedes consultar todas las especialidades arriba y preparar la actividad, las fechas y tus principales dudas."
+      }
+    },
+    {
+      "name": "NoJS mobile no overflow",
+      "pass": true,
+      "evidence": {
+        "width": 390,
+        "scrollWidth": 390
+      }
+    },
+    {
+      "name": "No external requests",
+      "pass": true,
+      "evidence": {
+        "external": [],
+        "uniqueRequests": [
+          "http://127.0.0.1:4173/",
+          "http://127.0.0.1:4173/assets/fonts/dm-sans.ttf",
+          "http://127.0.0.1:4173/style.css",
+          "http://127.0.0.1:4173/app.js",
+          "http://127.0.0.1:4173/assets/fonts/instrument-serif-italic.ttf",
+          "http://127.0.0.1:4173/assets/favicon.svg"
+        ]
+      }
+    },
+    {
+      "name": "No page or console errors",
+      "pass": true,
+      "evidence": {
+        "consoleErrors": [],
+        "pageErrors": []
+      }
+    },
+    {
+      "name": "No request failures",
+      "pass": true,
+      "evidence": []
+    }
+  ],
+  "consoleErrors": [],
+  "pageErrors": [],
+  "requests": [
+    "http://127.0.0.1:4173/",
+    "http://127.0.0.1:4173/assets/fonts/dm-sans.ttf",
+    "http://127.0.0.1:4173/style.css",
+    "http://127.0.0.1:4173/app.js",
+    "http://127.0.0.1:4173/assets/fonts/instrument-serif-italic.ttf",
+    "http://127.0.0.1:4173/assets/favicon.svg",
+    "http://127.0.0.1:4173/assets/favicon.svg",
+    "http://127.0.0.1:4173/",
+    "http://127.0.0.1:4173/assets/fonts/dm-sans.ttf",
+    "http://127.0.0.1:4173/style.css",
+    "http://127.0.0.1:4173/app.js",
+    "http://127.0.0.1:4173/assets/fonts/instrument-serif-italic.ttf",
+    "http://127.0.0.1:4173/assets/favicon.svg",
+    "http://127.0.0.1:4173/",
+    "http://127.0.0.1:4173/assets/fonts/dm-sans.ttf",
+    "http://127.0.0.1:4173/style.css",
+    "http://127.0.0.1:4173/app.js",
+    "http://127.0.0.1:4173/assets/fonts/instrument-serif-italic.ttf",
+    "http://127.0.0.1:4173/assets/favicon.svg",
+    "http://127.0.0.1:4173/",
+    "http://127.0.0.1:4173/assets/fonts/dm-sans.ttf",
+    "http://127.0.0.1:4173/style.css",
+    "http://127.0.0.1:4173/app.js",
+    "http://127.0.0.1:4173/assets/fonts/instrument-serif-italic.ttf",
+    "http://127.0.0.1:4173/assets/favicon.svg",
+    "http://127.0.0.1:4173/",
+    "http://127.0.0.1:4173/assets/fonts/dm-sans.ttf",
+    "http://127.0.0.1:4173/style.css",
+    "http://127.0.0.1:4173/app.js",
+    "http://127.0.0.1:4173/assets/fonts/instrument-serif-italic.ttf",
+    "http://127.0.0.1:4173/assets/favicon.svg",
+    "http://127.0.0.1:4173/",
+    "http://127.0.0.1:4173/assets/fonts/dm-sans.ttf",
+    "http://127.0.0.1:4173/style.css",
+    "http://127.0.0.1:4173/app.js",
+    "http://127.0.0.1:4173/assets/fonts/instrument-serif-italic.ttf",
+    "http://127.0.0.1:4173/assets/favicon.svg",
+    "http://127.0.0.1:4173/",
+    "http://127.0.0.1:4173/assets/fonts/dm-sans.ttf",
+    "http://127.0.0.1:4173/style.css",
+    "http://127.0.0.1:4173/app.js",
+    "http://127.0.0.1:4173/assets/fonts/instrument-serif-italic.ttf",
+    "http://127.0.0.1:4173/assets/favicon.svg",
+    "http://127.0.0.1:4173/assets/favicon.svg"
+  ],
+  "networkFailures": [],
+  "summary": {
+    "checks": 46,
+    "passed": 46,
+    "failed": 0
+  }
+}

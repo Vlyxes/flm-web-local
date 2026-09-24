@@ -1,0 +1,7 @@
+__pycache__/
+.DS_Store
+qa/*.png
+qa/*.webm
+.server.log
+node_modules/
+.preview-pages/

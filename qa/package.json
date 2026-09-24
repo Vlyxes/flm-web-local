@@ -1,0 +1,8 @@
+{
+  "name": "flm-web-qa",
+  "private": true,
+  "description": "Optional browser checks for the FLM website",
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
+}
